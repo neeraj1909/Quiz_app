@@ -20,33 +20,31 @@ class Student(models.Model):
         ('J', 'JAYBHARAT BHAVAN'),
     )
 
-    roll_no = models.IntegerField(primary_key= True)
-    first_name = models.CharField(max_length= 20)
-    last_name = models.CharField(max_length= 20)
-    email_id = models.EmailField(max_length= 30, blank= True)
-    mobile_number = models.IntegerField(unique= True)
-    year = models.CharField(max_length=1, choices= YEAR_CHOICES)
-    hostel_name = models.CharField(max_length= 1, choices= HOSTEL_NAME)
+    roll_no = models.IntegerField(primary_key=True)
+    first_name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
+    email_id = models.EmailField(max_length=30, blank=True)
+    mobile_number = models.IntegerField(unique=True)
+    year = models.CharField(max_length=1, choices=YEAR_CHOICES)
+    hostel_name = models.CharField(max_length=1, choices=HOSTEL_NAME)
 
     def __str__(self):
         return ("%s %s" % (self.first_name, self.last_name))
 
 
-
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
+    is_published = models.BooleanField('is published')
     pub_date = models.DateTimeField('date published')
 
     def __str__(self):
-        return  self.question_text
+        return self.question_text
 
 
 class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='choices')
     choice_text = models.CharField(max_length=200)
-    #add a boolean attribute to check if it is a correct-choice
-    is_correct_choice = models.BooleanField(default= True)
+    is_correct = models.BooleanField(default=True)
 
     def __str__(self):
         return self.choice_text
-

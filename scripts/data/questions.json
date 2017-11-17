@@ -1,0 +1,44 @@
+[
+  {
+    "question_text": "Who is the inventor of java?",
+    "choices": [
+      {
+        "choice_text": "dennis retiche",
+        "is_correct": false
+      },
+      {
+        "choice_text": "robert goosley",
+        "is_correct": false
+      },
+      {
+        "choice_text": "James Gosling",
+        "is_correct": true
+      },
+      {
+        "choice_text": "mohammad shahid khan",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question_text": "Java is a ______________?",
+    "choices": [
+      {
+        "choice_text": "High Level Language",
+        "is_correct": true
+      },
+      {
+        "choice_text": "Low Level Language",
+        "is_correct": false
+      },
+      {
+        "choice_text": "Middle Level Language",
+        "is_correct": false
+      },
+      {
+        "choice_text": "None of the Above",
+        "is_correct": false
+      }
+    ]
+  }
+]
