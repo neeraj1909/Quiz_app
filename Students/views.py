@@ -10,10 +10,13 @@ def results(request, question_id):
 
 
 def index(request):
-    context = {
+    '''context = {
         "questions": Question.objects.all()
-    }
-    return render(request, "quiz/index.html", context)
+    }'''
+
+    p = {'x' : "welcome at quiz app!"}
+
+    return render(request, "Students/index.html", context = p)
 
 
 def detail(request, question_id):
