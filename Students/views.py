@@ -22,3 +22,18 @@ def index(request):
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'quiz/question_detail.html', {'question': question})
+
+
+def register(request):
+
+
+	# All code for registration here.
+	return render(request, "Students/registration.html")
+
+
+def login(request):
+
+
+	# Add code here for login 
+
+	return render(request, "Students/login.html")
