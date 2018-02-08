@@ -1,3 +1,8 @@
+from django.contrib.auth import login, logout
+from django.core.urlresolvers import reverse_lazy
+from django.views.generic import CreateView
+from . import forms
+
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 
@@ -24,16 +29,19 @@ def detail(request, question_id):
     return render(request, 'quiz/question_detail.html', {'question': question})
 
 
-def register(request):
+class register(CreateView):
+    form_class = forms.UserCreateForm
+    success_url = reverse_lazy("login")
+    template_name = "Students/registration.html"
 
 
-	# All code for registration here.
-	return render(request, "Students/registration.html")
+    # # All code for registration here.
+    # return render(request, "Students/registration.html")
 
 
-def login(request):
+# def login(request):
 
 
-	# Add code here for login 
+#   # Add code here for login 
 
-	return render(request, "Students/login.html")
+#   return render(request, "Students/login.html")

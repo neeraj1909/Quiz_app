@@ -1,4 +1,6 @@
+from django.contrib import auth
 from django.db import models
+from django.utils import timezone
 
 
 # Create your models here.
@@ -48,3 +50,10 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+
+# Added experimental code here
+class User(auth.models.User, auth.models.PermissionsMixin):
+    
+    def __str__(self):
+        return "@{}".format(self.username)
