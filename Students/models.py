@@ -52,7 +52,7 @@ class Choice(models.Model):
         return self.choice_text
 
 
-# Added experimental code here
+# User authentication class
 class User(auth.models.User, auth.models.PermissionsMixin):
     
     def __str__(self):
