@@ -23,7 +23,7 @@ app_name = 'Students'
 urlpatterns = [
     url(r'^$', views.homepage, name= 'homepage'),
     url(r'^admin/', admin.site.urls),
-    url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
+    # url(r'^login/$', auth_views.login, name='login'),
+    # url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^student/', include('Students.urls'))
 ]

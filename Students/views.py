@@ -31,7 +31,7 @@ def detail(request, question_id):
 
 class register(CreateView):
     form_class = forms.UserCreateForm
-    success_url = reverse_lazy("login")
+    success_url = reverse_lazy("Students:login")
     template_name = "Students/registration.html"
 
 
