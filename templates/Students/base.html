@@ -29,7 +29,7 @@
         <form class="form-inline">
           <div class="mx-auto">
             {% if user.is_authenticated %}
-            <button type="submit" class="btn btn-link btn-danger"><a href="{% url 'Students:logout' %}" class="text-white">Logout</a></button>
+            <button type="submit" class="btn btn-link btn-danger"><a href="{% url 'Students:logout' %}" class="text-white">Log Out <i class="fa fa-sign-out" aria-hidden="true"></i></a></button>
 
             {% endif %}
           </div>
