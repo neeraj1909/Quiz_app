@@ -16,13 +16,19 @@
   <body class="bg-light">
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
-        <h1><a href="{% url 'homepage' %}" class="navbar-brand">
+        <!-- <h1><a href="{% url 'homepage' %}" class="navbar-brand">
         <img src="http://placehold.it/40x40" alt="Logo" class="rounded">
-         Quiz App</a></h1>
+         Quiz App</a></h1> -->
+         {% if user.is_authenticated %}
+          <h1><img src="http://placehold.it/40x40" alt="Logo" class="rounded"></h1>
+        {% else %}
+          <h1><a href="{% url 'homepage' %}" class="navbar-brand">
+          <img src="http://placehold.it/40x40" alt="Logo" class="rounded">
+           Quiz App</a></h1>
+        {% endif %}
         <form class="form-inline">
           <div class="mx-auto">
             {% if user.is_authenticated %}
-
             <button type="submit" class="btn btn-link btn-danger"><a href="{% url 'Students:logout' %}" class="text-white">Logout</a></button>
 
             {% endif %}
