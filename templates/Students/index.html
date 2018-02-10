@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 {% extends "Students/base.html" %}
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	{% block body_block %}
-    <h1 class="h3">Hello, {{x}}<br> You're Now at Quiz.</h1>
-    {% endblock %}
-</body>
-</html>
+{% load bootstrap4 %}
+	{% block body_block%}
+	<div class="container">
+	    <div class="row">
+	        <!-- <div class="col-12 text-center my-4">
+				<h2>Online Quiz</h2>
+				<p>This time in QUIZ-APP, we bring to you an online quiz on topics related to various fields of science and technology.
+				</p>
+				<p style="color:green;">
+				    <i><b>Online Quiz is over. You can download report of your attempts and answers to all questions.</b></i>
+				</p>
+				<p style="text-align:center;">
+				    <a href="/quiz_app/your-attempts/">
+				        <button>See your attempts</button>
+				    </a>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="/quiz/see-answers/">
+				    <button>See Answers</button>
+				</a>
+				</p>
+			</div> -->
+			<div class="card border-info mx-4 my-4">
+			    <div class="card-body text-info">
+			        <h4 class="card-title">Rules :</h4>
+				    <p class="card-text">
+						<ul style="list-style:decimal;">
+						    <!-- <li>At max only 10 questions can be answered in one day.</li> -->
+						    <li>Every question is having a timeout of at max 3 minutes. If it is answered after timeout, no marks will be awarded.
+						    </li>
+						    <li>For every question there is a minimum time limit (generally 8 seconds but may be more or less depending on word count of question). If time taken to answer is more than minimum time limit, then marks will be awarded using following formula :
+						    <br>
+						    <h4><span class="badge badge-danger"><i>marks_awarded = (maximum_marks * minimum_time_limit) / actual_time_taken</i></span></h4>
+						    (** Rounded off upto two decimal points.)
+						    </li>
+						    <li>Try to answer as quickly as you can.</li>
+						    <li>No question will be repeated for a user even if he refuses to answer after seeing it. Even if you skip aquestion, it will be counted as attempted question.
+						    </li>
+						    <li>Since, questions are selected randomly from a large database, <b>probability of two persons getting the same question simultaneously is less than 0.50 percent.</b> Please don't try to behave smartly.
+						    </li>
+
+						    <!-- <li>Check your score, rank etc. in the <a href="/quiz/dashboard/">dashboard</a>.</li> -->
+						    <li>If difference between "Time Taken between Request and Submission to Server" and "Time Taken Calculated by Timer" is found more than 10 seconds, it means either your connection is very slow or you are trying to manipulate timer. If this will happen frequently, your quiz account will be disabled and no marks will be awarded for such submissions. It's advised to use high speed internet for this event.
+						    </li>
+						</ul>
+				    </p>
+				    <a href="#" class="btn btn-info">Start Quiz</a>
+				</div>  
+				<div class="card-footer">Created DD-MM-YYYY</div>  
+			</div>	
+		</div>	
+	</div>	
+	{% endblock %}

@@ -19,9 +19,7 @@ def index(request):
         "questions": Question.objects.all()
     }'''
 
-    p = {'x' : "welcome at quiz app!"}
-
-    return render(request, "Students/index.html", context = p)
+    return render(request, "Students/index.html")
 
 
 def detail(request, question_id):
@@ -45,3 +43,6 @@ class register(CreateView):
 #   # Add code here for login 
 
 #   return render(request, "Students/login.html")
+
+def question(request):
+    return render(request, 'Students/question.html') 
