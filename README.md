@@ -4,7 +4,9 @@ This is an online quiz organizing website project, developed using Python's web 
 For front-end designing we have used Twitter's front-end library Bootstrap4.
 
 ### Current Features
-Site access features:
+
+**Site access features:**
+
 
 * Every quiz can be accessed only if the user is logged in.
 * In the signing-up process the user is required to give the following information
@@ -12,11 +14,10 @@ Site access features:
 	2. Email-id (unique for every user)
 	3. Mobile Number (unique for every user)
 	4. Roll No.
-	5. Hostel Name
-	6. Password
+	5. Password
 * For login the user will be required to enter *Email-id* and *Password* only
 
-Features of each quiz:
+**Features of each quiz:**
 
 * The logged in user either can create his own quiz or take an existing quiz.
 * For creating the quiz, the user will be required to enter the *Title* of the quiz and questions and their corresponding options.
@@ -24,17 +25,8 @@ Features of each quiz:
 * There will be timer of each quiz and the user is required to finish the quiz in time. 
 * When the timer stops, the corresponding record (i.e. number of correct answers) will be saved automatically.
 
-Rules for the marks calculation:
 
-* Every question is having a timeout of at max 3 minutes. If it is answered after timeout, no marks will be awarded.
-* For every question there is a minimum time limit (generally 8 seconds but may be more or less depending on word count of question).<br>
-* If time taken to answer is more than minimum time limit, then marks will be awarded using following formula :
-* *marks_awarded = (maximum_marks * minimum_time_limit) / actual_time_taken*
-* No question will be repeated for a user even if he refuses to answer after seeing it. Even if you skip aquestion,<br> it will be counted as attempted question.
-* If difference between "Time Taken between Request and Submission to Server" and "Time Taken Calculated by Timer" is found more than 10 seconds, <br>
-it means either your connection is very slow or you are trying to manipulate timer. If this will happen frequently,<br> your quiz account will be disabled and no marks will be awarded for such submissions.
-
-Dashboard features:
+**Dashboard features:**
 
 * There are two type of dashboard
 	1. Dashboard of corresponding uer
