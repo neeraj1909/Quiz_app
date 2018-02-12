@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "Students/base.html" %}
+{% load bootstrap4 %}
+
+	{% block body_block %}
+        <div class="container">
+            {% if question %}
+	            <ul>
+			        <li>Question : <i>{{ question.question_text }}</i></li>
+			        <!-- <li><a href="#">{{ question.answers }}</a></li> -->
+			        <li> Question Published Date : <i>{{ question.pub_date }}</i></li>
+			    </ul>
+			{% else %}
+			    <p>No questions are available.</p>
+			{% endif %}
+        	 
+        </div>
+    {% endblock %}
