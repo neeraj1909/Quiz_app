@@ -46,3 +46,7 @@ class register(CreateView):
 
 def question(request):
     return render(request, 'Students/question.html') 
+
+def rules(request):
+
+    return render(request, 'Students/rules.html')
