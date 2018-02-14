@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^question/$', views.question, name='question'),
     url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
     url(r'^(?P<question_id>[0-9]+)/results/$',views.results, name='results'),
+    url(r'^rules$', views.rules, name='rules')
 
 ]

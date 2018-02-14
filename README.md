@@ -29,9 +29,9 @@ For front-end designing we have used Twitter's front-end library Bootstrap4.
 **Dashboard features:**
 
 * There are two type of dashboard
-	1. Dashboard of corresponding uer
+	1. Dashboard of corresponding user
 	2. Global dashboard (i.e. Leaderboard)
-* In the *Dashboard of corresponding uer* the user can see his attempted quiz statistics <br>(i.e. *No. of Correct answers*, *Marks obtained* )
+* In the *Dashboard of corresponding user* the user can see his attempted quiz statistics <br>(i.e. *No. of Correct answers*, *Marks obtained* )
 * In the *Global dashboard* there will be overall ranking of users who have attended the corresponding quiz.
 
 
